@@ -1,0 +1,443 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.xfath.hormart.fragments.homefragment.homechildfragments.ChildMenuFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="id"
+        android:visibility="gone"
+        android:id="@+id/tv_uid_menu"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe_refresh_menu">
+
+        <LinearLayout
+            android:id="@+id/ll_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_fragments"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/sv_child_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:paddingTop="10dp"
+                        android:paddingStart="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:paddingEnd="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/iv_ava_menu"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="10dp"
+                                android:paddingBottom="10dp"
+                                app:civ_border_width="2dp"
+                                android:src="@drawable/ic_cow_avatar"
+                                app:civ_border_color="@color/red" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_silahkanmasukordaftar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/silahkanmasukdulu"
+                                android:textAlignment="textStart"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/titillium"
+                                android:textSize="18sp"/>
+
+                            <Button
+                                android:layout_gravity="start"
+                                android:id="@+id/btn_login_menu"
+                                android:layout_width="wrap_content"
+                                android:paddingHorizontal="75dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@drawable/bg_btn_login"
+                                android:text="Masuk  |  Daftar"
+                                android:textColor="@color/white" />
+
+
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/tv_nama_menu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Fathurrahman"
+                                android:textColor="#000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/tv_no_hp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="123456789012"
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/tv_email_menu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Muhammad Fathur Rahman"
+                                android:textColor="#000" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@drawable/drawer_bg" />
+
+                    <!--            <RelativeLayout
+                                    android:id="@+id/menu1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/line"
+                                    android:layout_marginTop="10dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="20dp"
+                                            android:src="@drawable/ic_cow_avatar" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="20dp"
+                                            android:text="@string/name_menu_profil"
+                                            android:textColor="#000"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:id="@+id/iv_edits"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_gravity="end"
+                                        android:layout_marginEnd="20dp"
+                                        android:foregroundGravity="right"
+                                        android:src="@drawable/ic_arrow_right" />
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/line3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1.5dp"
+                                    android:layout_marginStart="61dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="61dp"
+                                    android:background="@drawable/line"
+                                    android:backgroundTint="#34000000"
+                                    android:orientation="horizontal" />
+
+                                <RelativeLayout
+                                    android:id="@+id/menu2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/menu1"
+                                    android:layout_marginTop="10dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="20dp"
+                                            android:src="@drawable/ic_cow_avatar" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="20dp"
+                                            android:text="@string/name_menu_profil"
+                                            android:textColor="#000"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_gravity="end"
+                                        android:layout_marginEnd="20dp"
+                                        android:foregroundGravity="right"
+                                        android:src="@drawable/ic_arrow_right" />
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/line4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1.5dp"
+                                    android:layout_below="@+id/menu2"
+                                    android:layout_marginStart="61dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="61dp"
+                                    android:background="@drawable/line"
+                                    android:backgroundTint="#34000000"
+                                    android:orientation="horizontal" />-->
+
+                    <RelativeLayout
+                        android:id="@+id/menu3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/menu2"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="20dp"
+                                android:src="@drawable/ic_baseline_share" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:text="Undang Teman ke hormart"
+                                android:textColor="#000"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="20dp"
+                            android:foregroundGravity="right"
+                            android:src="@drawable/ic_arrow_right" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginHorizontal="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/drawer_bg" />
+
+                    <RelativeLayout
+                        android:id="@+id/menu4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/menu3"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="20dp"
+                                android:src="@drawable/ic_baseline_rate" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:text="Nilai Kami ( coming soon )"
+                                android:textColor="#000"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="20dp"
+                            android:foregroundGravity="right"
+                            android:src="@drawable/ic_arrow_right" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginHorizontal="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/drawer_bg" />
+
+                    <RelativeLayout
+                        android:id="@+id/menu5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/menu4"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="20dp"
+                                android:src="@drawable/ic_baseline_help_outline_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:text="Pusat Bantuan"
+                                android:textColor="#000"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="20dp"
+                            android:foregroundGravity="right"
+                            android:src="@drawable/ic_arrow_right" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginHorizontal="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/drawer_bg" />
+
+                    <RelativeLayout
+                        android:id="@+id/menu6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/menu5"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="20dp"
+                                android:src="@drawable/ic_developer" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:text="Tentang Aplikasi"
+                                android:textColor="#000"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="20dp"
+                            android:foregroundGravity="right"
+                            android:src="@drawable/ic_arrow_right" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginHorizontal="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/drawer_bg" />
+
+                    <Button
+                        android:visibility="gone"
+                        android:id="@+id/btn_keluar_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="50dp"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_btn_login"
+                        android:text="Keluar"/>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

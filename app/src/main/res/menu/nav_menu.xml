@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/selector_home"
+        android:title="@string/beranda"/>
+
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/selector_chat"
+        android:title="Percakapan"/>
+
+    <item
+        android:id="@+id/nulls"
+        android:title=""
+        android:enabled="false"/>
+
+    <item
+        android:id="@+id/myads"
+        android:icon="@drawable/selector_iklan"
+        android:title="Iklan Saya" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/selector_profil"
+        android:title="@string/profil_nav"/>
+
+</menu>

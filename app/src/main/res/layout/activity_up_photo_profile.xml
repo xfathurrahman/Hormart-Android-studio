@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.UpPhotoProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/header"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ecommerce_pattern" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:contentDescription="@string/header"
+            android:scaleType="fitXY"
+            android:src="@drawable/dropmilkwhite" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutlottie"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:visibility="gone"
+            android:id="@+id/lottie_congrats"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="-50dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/congratulation" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-100dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/carouselphoto" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bg_bring_upphoto3" />
+
+    <RelativeLayout
+        android:id="@+id/layoutavaup"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerInParent="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_cow_avatar"
+            app:civ_border_color="@color/red"
+            app:civ_border_width="3dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatarup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:civ_border_color="@color/red"
+            app:civ_border_width="3dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_plus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="6dp"
+            android:src="@drawable/addphoto"
+            app:civ_border_color="@color/red"
+            app:civ_border_width="0.2dp"
+            app:civ_circle_background_color="@color/red" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_check"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:lottie_autoPlay="true"
+            android:visibility="gone"
+            app:lottie_loop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="2dp"
+            app:lottie_rawRes="@raw/check" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:fontFamily="@font/bebasneue"
+        android:id="@+id/tv_ambilorgaleri"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutavaup"
+        android:layout_marginTop="5dp"
+        android:text="Ambil Foto atau \npilih dari Galerimu"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rv_btnupload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutavaup"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp">
+
+        <Button
+            android:id="@+id/btn_upload_foto"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_login"
+            android:backgroundTint="@color/blue"
+            android:text="Upload Foto"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rv_simpan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutavaup"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/simpanpp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_login"
+            android:backgroundTint="@color/blue"
+            android:text="Lanjut"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_lewati_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/lewati"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:text="Unggah Foto Profilmu"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/p_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="id"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/pg_uppp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:visibility="gone"
+            android:id="@+id/lottie_confetti"
+            android:layout_marginTop="-100dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/confettibanner" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
